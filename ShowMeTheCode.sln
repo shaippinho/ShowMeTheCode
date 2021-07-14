@@ -7,9 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaxaJuros", "TaxaJuros", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CalculaJuros", "CalculaJuros", "{B5A7E0DD-4CD9-4E3C-A072-9FAFDA960F59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMTC.API.TaxaJuros", "SMTC.API.TaxaJuros\SMTC.API.TaxaJuros.csproj", "{CB058E6E-4A37-4639-B5CF-EA526213F3F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMTC.API.TaxaJuros", "SMTC.API.TaxaJuros\SMTC.API.TaxaJuros.csproj", "{CB058E6E-4A37-4639-B5CF-EA526213F3F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMTC.API.CalculaJuros", "SMTC.API.CalculaJuros\SMTC.API.CalculaJuros.csproj", "{04FA7C74-1DB1-4209-9395-FECE93A64EFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMTC.API.CalculaJuros", "SMTC.API.CalculaJuros\SMTC.API.CalculaJuros.csproj", "{04FA7C74-1DB1-4209-9395-FECE93A64EFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{B142EBB2-4AF0-47DF-8297-ED81983783E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMTC.Tests", "SMTC.Tests\SMTC.Tests.csproj", "{3956DB43-0721-46AE-9131-E48EC9C969FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		{04FA7C74-1DB1-4209-9395-FECE93A64EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04FA7C74-1DB1-4209-9395-FECE93A64EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04FA7C74-1DB1-4209-9395-FECE93A64EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3956DB43-0721-46AE-9131-E48EC9C969FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3956DB43-0721-46AE-9131-E48EC9C969FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3956DB43-0721-46AE-9131-E48EC9C969FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3956DB43-0721-46AE-9131-E48EC9C969FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CB058E6E-4A37-4639-B5CF-EA526213F3F9} = {45EF7DB6-802B-421E-9FC5-B7A712E990D5}
 		{04FA7C74-1DB1-4209-9395-FECE93A64EFD} = {B5A7E0DD-4CD9-4E3C-A072-9FAFDA960F59}
+		{3956DB43-0721-46AE-9131-E48EC9C969FB} = {B142EBB2-4AF0-47DF-8297-ED81983783E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1989C486-DB58-4F6F-A49D-63AE6E68B81B}
