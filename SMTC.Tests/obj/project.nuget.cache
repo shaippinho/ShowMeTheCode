@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1XhqR5GKg/52IQoJNgObv+pJLQixNuaBSIbiB5fdeGQAKDlclJHKp/w7q0FEWmyUdcDtq0IFY6/eEICEFMq+kw==",
+  "dgSpecHash": "2o5H9p17G1IKXRmQfts9YxVZfBXkydZw5lWv4zlToDayUsOv+b40whwgrPGbXD4JSB2hBAvrcypf5R+kFo2sxw==",
   "success": true,
   "projectFilePath": "D:\\Work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.Tests\\SMTC.Tests.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\shaie\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\shaie\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.9.4\\microsoft.testplatform.objectmodel.16.9.4.nupkg.sha512",
     "C:\\Users\\shaie\\.nuget\\packages\\microsoft.testplatform.testhost\\16.9.4\\microsoft.testplatform.testhost.16.9.4.nupkg.sha512",
+    "C:\\Users\\shaie\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
     "C:\\Users\\shaie\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\shaie\\.nuget\\packages\\moq\\4.16.1\\moq.4.16.1.nupkg.sha512",
     "C:\\Users\\shaie\\.nuget\\packages\\moq.automock\\3.0.0\\moq.automock.3.0.0.nupkg.sha512",
