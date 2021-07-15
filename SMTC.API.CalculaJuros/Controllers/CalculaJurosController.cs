@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace SMTC.API.CalculaJuros.Controllers
 {
-    [Route("[controller]")]
+    //[Route("[controller]")]
     [ApiController]
     public class CalculaJurosController : ControllerBase
     {
@@ -15,7 +15,7 @@ namespace SMTC.API.CalculaJuros.Controllers
             _calculaJurosService = calculaJurosService;
         }
 
-        [HttpGet]
+        [HttpGet("CalculaJuros")]
         public async Task<double> Get(double valorInicial, int meses)
         {
             return await _calculaJurosService.Calculo(valorInicial, meses);
