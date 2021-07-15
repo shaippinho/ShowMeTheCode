@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HdieCyKBKcEcnGek3T0tMZ04x1zBeejxjdd6YYtKmoQZ91XJEaFylk+Nvg2uvxZt4D4wBXPyVFgDwFuK8AeO8g==",
+  "dgSpecHash": "+JEjLvQS135AxPOQOAgnguS7CuJq72vGovWsc5s+EU6psJ0QhgP+g0MZ0hsom4UYzRoyBGlcCsiBPAfk4tVt5Q==",
   "success": true,
   "projectFilePath": "D:\\Work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.CalculaJuros\\SMTC.API.CalculaJuros.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\shaie\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\shaie\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\shaie\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\shaie\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
     "C:\\Users\\shaie\\.nuget\\packages\\refit\\6.0.38\\refit.6.0.38.nupkg.sha512",
     "C:\\Users\\shaie\\.nuget\\packages\\refit.httpclientfactory\\6.0.38\\refit.httpclientfactory.6.0.38.nupkg.sha512",
     "C:\\Users\\shaie\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",

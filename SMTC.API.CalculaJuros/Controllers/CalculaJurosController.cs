@@ -1,28 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SMTC.API.CalculaJuros.Interfaces;
-using System;
+using SMTC.API.CalculaJuros.Application.Interfaces;
 using System.Threading.Tasks;
 
 namespace SMTC.API.CalculaJuros.Controllers
 {
-    [Route("[controller]")]
+    //[Route("[controller]")]
     [ApiController]
     public class CalculaJurosController : ControllerBase
     {
-        private readonly ITaxaJuros _taxaJuros;
+        private readonly ICalculaJurosService _calculaJurosService;
 
-        public CalculaJurosController(ITaxaJuros taxajuros)
+        public CalculaJurosController(ICalculaJurosService calculaJurosService)
         {
-            _taxaJuros = taxajuros;
+            _calculaJurosService = calculaJurosService;
         }
 
-        [HttpGet]
+        [HttpGet("CalculaJuros")]
         public async Task<double> Get(double valorInicial, int meses)
         {
-            var taxaJuros = await _taxaJuros.GetTaxaJuros();
-            var result = Math.Pow((1 + taxaJuros), meses);
-            result = valorInicial * result;
-            return Math.Round(result, 2);
+            return await _calculaJurosService.Calculo(valorInicial, meses);
+        }
+
+        [HttpGet("ShowMeTheCode")]
+        public string Get()
+        {
+            return "https://github.com/shaippinho/ShowMeTheCode";
         }
     }
 }
