@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jH3u3ZenAHIUVKqv6PNhU1Gx4kXzo+BpjEyILtSEPr64lyL2kudl70quoC47B/8HT2j3n0Nf6Xuv+AcrnHVSag==",
+  "dgSpecHash": "WfwuTaupLg8If48hf4CG/kVIoN5SOcPCpVl77XPtF8Ziy9TV9IAhGdaIj1UWufiO3qe3yog3GnjiJtx0DZ6ZXw==",
   "success": true,
-  "projectFilePath": "D:\\Work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\SMTC.API.TaxaJuros.csproj",
+  "projectFilePath": "D:\\work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\SMTC.API.TaxaJuros.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shaie\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\shaie\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

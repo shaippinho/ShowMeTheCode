@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\SMTC.API.TaxaJuros.csproj": {}
+    "D:\\work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\SMTC.API.TaxaJuros.csproj": {}
   },
   "projects": {
-    "D:\\Work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\SMTC.API.TaxaJuros.csproj": {
+    "D:\\work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\SMTC.API.TaxaJuros.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\SMTC.API.TaxaJuros.csproj",
+        "projectUniqueName": "D:\\work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\SMTC.API.TaxaJuros.csproj",
         "projectName": "SMTC.API.TaxaJuros",
-        "projectPath": "D:\\Work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\SMTC.API.TaxaJuros.csproj",
+        "projectPath": "D:\\work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\SMTC.API.TaxaJuros.csproj",
         "packagesPath": "C:\\Users\\shaie\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\obj\\",
+        "outputPath": "D:\\work\\Projetos\\Mouts\\ShowMeTheCode\\ShowMeTheCode\\SMTC.API.TaxaJuros\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shaie\\AppData\\Roaming\\NuGet\\NuGet.Config",
