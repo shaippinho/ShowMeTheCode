@@ -34,7 +34,7 @@ $ docker network create rederefit
 $ docker build -f SMTC.API.TaxaJuros/Dockerfile -t taxajuros:1.0 .
 
 #### Execução da API de Taxa de Juros
-$ docker container run --name TaxaJuros -p 5010:5010 -d --network rederefit taxajuros:1.0
+$ docker container run --name TaxaJuros -p 5010:80 -d --network rederefit taxajuros:1.0
 #### O servidor inciará na porta:5010 - acesse <http://localhost:5010/swagger> 
 
 #### Para criar a imagem da API de Cálculo
