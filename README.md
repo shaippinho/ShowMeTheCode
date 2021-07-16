@@ -42,4 +42,4 @@ $ docker build -f SMTC.API.CalculaJuros/Dockerfile -t calculajuros:1.0 .
 
 #### Execução da API de Cálculo
 $ docker container run --name CalculaJuros -p 5000:80 -d --network rederefit calculajuros:1.0
-#### O servidor inciará na porta:5000 - acesse <http://localhost:5010/swagger> 
+#### O servidor inciará na porta:5000 - acesse <http://localhost:5000/swagger> 
