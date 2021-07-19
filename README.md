@@ -28,18 +28,18 @@ $ dotnet restore
 ## Para execução no Docker
 
 #### Crie a rede de comunicação dos containers
-$ docker network create rederefit
+$ docker network create --subnet=172.18.0.0./16 rederefit
 
 #### Para criar a imagem da API de Taxa de Juros
 $ docker build -f SMTC.API.TaxaJuros/Dockerfile -t taxajuros:1.0 .
 
 #### Execução da API de Taxa de Juros
-$ docker container run --name TaxaJuros -p 5010:80 -d --network rederefit taxajuros:1.0
+$ docker container run --name TaxaJuros -p 5010:5010 -d --network rederefit --ip 172.18.0.4 taxajuros:1.0
 #### O servidor inciará na porta:5010 - acesse <http://localhost:5010/swagger> 
 
 #### Para criar a imagem da API de Cálculo
 $ docker build -f SMTC.API.CalculaJuros/Dockerfile -t calculajuros:1.0 .
 
 #### Execução da API de Cálculo
-$ docker container run --name CalculaJuros -p 5000:80 -d --network rederefit calculajuros:1.0
+$ docker container run --name CalculaJuros -p 5000:5000 -d --network rederefit --ip 172.18.0.5 calculajuros:1.0
 #### O servidor inciará na porta:5000 - acesse <http://localhost:5000/swagger> 
