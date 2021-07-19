@@ -28,7 +28,7 @@ $ dotnet restore
 ## Para execução no Docker
 
 #### Crie a rede de comunicação dos containers
-$ docker network create --subnet=172.18.0.0./16 rederefit
+$ docker network create --subnet=172.18.0.0/16 rederefit
 
 #### Para criar a imagem da API de Taxa de Juros
 $ docker build -f SMTC.API.TaxaJuros/Dockerfile -t taxajuros:1.0 .
