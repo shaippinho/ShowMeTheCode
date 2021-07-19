@@ -19,7 +19,7 @@ namespace SMTC.API.CalculaJuros.Application.Services
             var taxaJuros = await _taxaJuros.GetTaxaJuros();
             var result = Math.Pow((1 + taxaJuros), meses);
             result = valorInicial * result;
-            return Math.Round(result, 2);
+            return Math.Round(result, 2, MidpointRounding.AwayFromZero);
         }
     }
 }
