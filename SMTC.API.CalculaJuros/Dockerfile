@@ -18,4 +18,4 @@ RUN dotnet publish "SMTC.API.CalculaJuros.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "SMTC.API.CalculaJuros.dll", "--environment=Development"]
+ENTRYPOINT ["dotnet", "SMTC.API.CalculaJuros.dll", "--environment=Production"]
