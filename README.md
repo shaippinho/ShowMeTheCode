@@ -13,6 +13,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Swagger](https://swagger.io/)
 - [Xunit](https://xunit.net/)
 - [Docker](https://www.docker.com/)
+- [MediatR](https://github.com/jbogard/MediatR)
+- [CQRS](https://martinfowler.com/bliki/CQRS.html)
+- [Fluent Validation](https://fluentvalidation.net/)
 
 
 
