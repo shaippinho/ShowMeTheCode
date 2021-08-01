@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MediatR;
+using Microsoft.Extensions.DependencyInjection;
+using SMTC.API.TaxaJuros.Application.Interfaces;
+using SMTC.API.TaxaJuros.Application.Queries;
 
 namespace SMTC.API.TaxaJuros.Configuration
 {
@@ -6,7 +9,8 @@ namespace SMTC.API.TaxaJuros.Configuration
     {
         public static void RegisterServices(this IServiceCollection services)
         {
-            //services.AddScoped<ICalculaJurosService, CalculaJurosService>();
+            services.AddMediatR(typeof(Startup));
+            services.AddScoped<ITaxaJurosQuery, TaxaJurosQuery>();
         }
     }
 }
