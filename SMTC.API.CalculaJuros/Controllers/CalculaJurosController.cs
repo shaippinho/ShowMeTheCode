@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SMTC.API.CalculaJuros.Application.Interfaces;
+using SMTC.Core.Controllers;
 using System.Threading.Tasks;
 
 namespace SMTC.API.CalculaJuros.Controllers
 {
     //[Route("[controller]")]
-    [ApiController]
-    public class CalculaJurosController : ControllerBase
+    public class CalculaJurosController : BaseController
     {
         private readonly ICalculaJurosService _calculaJurosService;
 
@@ -21,10 +21,5 @@ namespace SMTC.API.CalculaJuros.Controllers
             return await _calculaJurosService.Calculo(valorInicial, meses);
         }
 
-        [HttpGet("ShowMeTheCode")]
-        public string Get()
-        {
-            return "https://github.com/shaippinho/ShowMeTheCode";
-        }
     }
 }

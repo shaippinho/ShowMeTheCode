@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SMTC.Core.Exception;
 
 namespace SMTC.API.TaxaJuros.Configuration
 {
@@ -15,6 +16,8 @@ namespace SMTC.API.TaxaJuros.Configuration
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
+
+            app.UseMiddleware<CustomExceptionMiddleware>();
 
             app.UseRouting();
 

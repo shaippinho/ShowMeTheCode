@@ -3,14 +3,14 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SMTC.API.TaxaJuros.Application.Commands;
 using SMTC.API.TaxaJuros.Application.Interfaces;
+using SMTC.Core.Controllers;
 using System.Net;
 using System.Threading.Tasks;
 
 namespace SMTC.API.TaxaJuros.Controllers
 {
-    [ApiController]
     [Route("[controller]")]
-    public class TaxaJurosController : ControllerBase
+    public class TaxaJurosController : BaseController
     {
         private readonly IMediator _mediator;
         private readonly ITaxaJurosQuery _taxaJurosQuery;
@@ -29,10 +29,10 @@ namespace SMTC.API.TaxaJuros.Controllers
         }
 
         [HttpPut]
-        [ProducesResponseType(typeof(ValidationResult), (int)HttpStatusCode.OK)]
-        public async Task<ValidationResult> Calcular([FromBody] double taxaJuros)
+        public async Task<IActionResult> Calcular([FromBody] double taxaJuros)
         {
-            return await _mediator.Send(new TaxaJurosUpdateCommand(taxaJuros));
+            var response = await _mediator.Send(new TaxaJurosUpdateCommand(taxaJuros));
+            return CustomResponse(response);
         }
     }
 }
