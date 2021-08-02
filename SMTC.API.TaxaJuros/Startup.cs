@@ -24,8 +24,11 @@ namespace SMTC.API.TaxaJuros
 
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers();
+            services.AddControllers()
+            .ConfigureApiBehaviorOptions(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
             services.AddSwaggerConfiguration();
             services.AddApiConfiguration(Configuration);
             services.RegisterServices();

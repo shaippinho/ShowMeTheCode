@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Refit;
 using SMTC.API.CalculaJuros.Interfaces;
+using SMTC.Core.Exception;
 using System;
 
 namespace SMTC.API.CalculaJuros.Configuration
@@ -21,6 +22,8 @@ namespace SMTC.API.CalculaJuros.Configuration
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
             
+            app.UseMiddleware<CustomExceptionMiddleware>();
+
             app.UseRouting();
          
             app.UseAuthorization();
