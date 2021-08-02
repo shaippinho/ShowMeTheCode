@@ -36,7 +36,6 @@ namespace SMTC.Core.Exception
         {
             _logger.LogCritical(exception?.Message);
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-            //await context.Response.WriteAsync(exception.ToString());
             await context.Response.WriteAsync((new CustomErrorModel(exception)).ToString());
         }
     }
