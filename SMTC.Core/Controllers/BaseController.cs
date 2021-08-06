@@ -1,6 +1,7 @@
 ﻿using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using SMTC.Core.Notification;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -46,6 +47,16 @@ namespace SMTC.Core.Controllers
             foreach (var erro in error)
             {
                 AddErrorProcessing(erro.ErrorMessage);
+            }
+
+            return CustomResponse();
+        }
+
+        protected ActionResult CustomResponse(List<DomainNotification> notifications)
+        {
+            foreach (var notification in notifications)
+            {
+                AddErrorProcessing(notification.Value);
             }
 
             return CustomResponse();

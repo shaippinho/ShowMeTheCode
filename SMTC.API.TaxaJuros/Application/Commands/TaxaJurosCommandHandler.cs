@@ -1,18 +1,14 @@
-﻿using FluentValidation.Results;
-using MediatR;
-using SMTC.Core.MediatR;
+﻿using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace SMTC.API.TaxaJuros.Application.Commands
 {
-    public class TaxaJurosCommandHandler : CommandHandler, IRequestHandler<TaxaJurosUpdateCommand, ValidationResult>
+    public class TaxaJurosCommandHandler : AsyncRequestHandler<TaxaJurosUpdateCommand>
     {
-        public async Task<ValidationResult> Handle(TaxaJurosUpdateCommand request, CancellationToken cancellationToken)
+        protected override async Task Handle(TaxaJurosUpdateCommand request, CancellationToken cancellationToken)
         {
-            if (!request.IsValid()) return request.ValidationResult;
-
-            return request.ValidationResult;
+            await Task.FromResult(0);
         }
     }
 }

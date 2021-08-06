@@ -1,13 +1,9 @@
-﻿using SMTC.Core.MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FluentValidation;
+﻿using FluentValidation;
+using MediatR;
 
 namespace SMTC.API.TaxaJuros.Application.Commands
 {
-    public class TaxaJurosUpdateCommand : Command
+    public class TaxaJurosUpdateCommand : IRequest
     {
         public double taxaJuros { get; set; }
 
@@ -16,11 +12,9 @@ namespace SMTC.API.TaxaJuros.Application.Commands
             this.taxaJuros = taxaJuros;
         }
 
-        public override bool IsValid()
-        {
-            ValidationResult = new TaxaJurosUpdateValidation().Validate(this);
-            return ValidationResult.IsValid;
-        }
+        //Factory Method
+        public static TaxaJurosUpdateCommand Create(double taxaJuros)
+           => new(taxaJuros);
     }
 
     public class TaxaJurosUpdateValidation : AbstractValidator<TaxaJurosUpdateCommand>
@@ -29,7 +23,13 @@ namespace SMTC.API.TaxaJuros.Application.Commands
         {
             RuleFor(c => c.taxaJuros)
                .NotNull()
-               .WithMessage("Taxa de Juros não pode ser vazio");
+               .WithMessage("Taxa de Juros não pode ser vazio")
+               .DependentRules(() =>
+               {
+                   RuleFor(x => x.taxaJuros)
+                   .GreaterThan(0)
+                   .WithMessage("Taxa de Juros tem que ser maior que zero");
+               });
         }
     }
 }
