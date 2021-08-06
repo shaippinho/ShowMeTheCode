@@ -1,10 +1,9 @@
-﻿using FluentValidation.Results;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SMTC.API.TaxaJuros.Application.Commands;
-using SMTC.API.TaxaJuros.Application.Interfaces;
+using SMTC.API.TaxaJuros.Application.Queries;
 using SMTC.Core.Controllers;
-using System.Net;
+using SMTC.Core.Notification;
 using System.Threading.Tasks;
 
 namespace SMTC.API.TaxaJuros.Controllers
@@ -13,26 +12,31 @@ namespace SMTC.API.TaxaJuros.Controllers
     public class TaxaJurosController : BaseController
     {
         private readonly IMediator _mediator;
-        private readonly ITaxaJurosQuery _taxaJurosQuery;
+        private readonly IDomainNotificationContext _notificationContext;
         public TaxaJurosController(
             IMediator mediator,
-            ITaxaJurosQuery taxaJurosQuery)
+            IDomainNotificationContext notificationContext)
         {
             _mediator = mediator;
-            _taxaJurosQuery = taxaJurosQuery;
+            _notificationContext = notificationContext;
         }
 
         [HttpGet]
-        public async Task<double> Get()
+        public async Task<IActionResult> Get([FromQuery] int tipo = 1)
         {
-            return (await _taxaJurosQuery.GetTaxa()).taxaJuros;
+            var query = TaxaJurosQuery.Create(tipo);
+            var result = await _mediator.Send(query);
+            return Ok(result.taxaJuros);
         }
 
         [HttpPut]
         public async Task<IActionResult> Calcular([FromBody] double taxaJuros)
         {
-            var response = await _mediator.Send(new TaxaJurosUpdateCommand(taxaJuros));
-            return CustomResponse(response);
+            await _mediator.Send(TaxaJurosUpdateCommand.Create(taxaJuros));
+
+            if (_notificationContext.HasErrorNotifications) { return CustomResponse(_notificationContext.GetErrorNotifications()); }
+
+            return Ok();
         }
     }
 }

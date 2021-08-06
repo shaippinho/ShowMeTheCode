@@ -3,6 +3,7 @@ using SMTC.API.CalculaJuros.Application.Interfaces;
 using SMTC.API.CalculaJuros.Application.Services;
 using SMTC.API.CalculaJuros.Controllers;
 using SMTC.API.CalculaJuros.Interfaces;
+using SMTC.Core.Notification;
 using System;
 using Xunit;
 
@@ -14,11 +15,13 @@ namespace SMTC.Tests
         public async void Controller_Get_Calcula_Juros()
         {
             //Arrange
+            var mockIDomainNotificationContext = new Mock<IDomainNotificationContext>();
             var mockICalculaJurosService = new Mock<ICalculaJurosService>();
             mockICalculaJurosService.Setup(x => x.Calculo(100, 5)).ReturnsAsync(105.10);
 
             var calculaJurosController = new CalculaJurosController(
-                mockICalculaJurosService.Object
+                mockICalculaJurosService.Object,
+                mockIDomainNotificationContext.Object
                 );
 
             //Act
