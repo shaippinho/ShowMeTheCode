@@ -1,9 +1,17 @@
 <h1 align="center">ShowMeTheCode</h1> 
+<h4 align="center"> 
+	🚧  Projeto em construção...  🚧
+</h4>
 
-<p align="center">Projeto de cálculo de juros compostos.</p> 
+Inicialmente este projeto foi construído a partir de um processo seletivo para construção de **microsserviços**, utilizando .NET 5.
 
+Após a prova, o objetivo deste projeto passou para, criação de um template de projeto, com todos os recursos que utilizei nos últimos meses.
 
-### 🛠 Tecnologias
+### 👉 No que se baseia
+
+Cálculo de juros compostos. A aplicação utilizará dois microsserviços, onde o primeiro irá fornecer a taxa de juros, e o segundo irá consumir o primeiro para calcular o valor final levando em consideração o valor inicial e o tempo fornecidos pelo usuário.
+
+### 🛠 Tecnologias utilizadas
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -11,15 +19,15 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Moq](https://github.com/Moq/moq4/wiki/Quickstart)
 - [Refit](https://github.com/reactiveui/refit)
 - [Swagger](https://swagger.io/)
-- [Xunit](https://xunit.net/)
+- [xUnit](https://xunit.net/)
 - [Docker](https://www.docker.com/)
 - [MediatR](https://github.com/jbogard/MediatR)
 - [CQRS](https://martinfowler.com/bliki/CQRS.html)
 - [Fluent Validation](https://fluentvalidation.net/)
 
+### 👉 Baixe o código
 
-
-### Clone este repositório
+#### Clone este repositório
 $ git clone <https://github.com/shaippinho/ShowMeTheCode.git>
 
 #### Acesse a pasta do projeto no terminal/cmd
@@ -32,7 +40,7 @@ $ cd ShowMeTheCode
 $ dotnet restore
 ```
 
-## Para execução no Docker
+### 👉 Para execução no Docker
 
 #### Crie a rede de comunicação dos containers
 ```
