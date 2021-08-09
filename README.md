@@ -9,7 +9,7 @@ Após a prova, o objetivo deste projeto passou para, criação de um template de
 
 ### 👉 No que se baseia
 
-Cálculo de juros compostos. A aplicação utilizará dois microsserviços, onde o primeiro irá fornecer a taxa de juros, e o segundo irá consumir o primeiro para calcular o valor final levando em consideração o valor inicial e o tempo fornecidos pelo usuário.
+Cálculo de juros compostos. A aplicação utilizará dois microsserviços. O primeiro irá fornecer a taxa de juros, e o segundo irá consumir o primeiro para calcular o valor final, levando em consideração o os dados fornecidos pelo usuário.
 
 ### 🛠 Tecnologias utilizadas
 
