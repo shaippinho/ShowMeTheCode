@@ -52,7 +52,7 @@ namespace SMTC.Tests
             Assert.Equal(expected, result);
         }
 
-        private double Calculo(double valorInicial, int meses, double taxaJuros)
+        private static double Calculo(double valorInicial, int meses, double taxaJuros)
         {
             var result = Math.Pow((1 + taxaJuros), meses);
             result = valorInicial * result;
