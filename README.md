@@ -24,6 +24,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [MediatR](https://github.com/jbogard/MediatR)
 - [CQRS](https://martinfowler.com/bliki/CQRS.html)
 - [Fluent Validation](https://fluentvalidation.net/)
+- [CI with Azure Pipelines](https://docs.microsoft.com/pt-br/azure/architecture/example-scenario/apps/devops-dotnet-webapp)
 
 ### 👉 Baixe o código
 
