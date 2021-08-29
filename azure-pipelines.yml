@@ -1,0 +1,22 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+ pathToProject: './SMTC.API.TaxaJuros/SMTC.API.TaxaJuros.csproj'
+
+steps:
+  - task: DotNetCoreCLI@2
+    displayName:  'Restore das dependências'
+    inputs:
+      command: 'restore'
+      projects: '$(pathToProject)'
+      feedsToUse: 'select'
+
+  - task: DotNetCoreCLI@2
+    displayName:  'Compilar aplicação'
+    inputs:
+      command: 'build'
+      projects: '$(pathToProject)'
