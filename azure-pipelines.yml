@@ -23,7 +23,7 @@ jobs:
         projects: '$(pathToProject)'
 
     - task: DotNetCoreCLI@2
-      displayName:  'Publicar Microsservice'
+      displayName:  'Gerar Artefatos'
       inputs:
         command: 'publish'
         publishWebProjects: false
