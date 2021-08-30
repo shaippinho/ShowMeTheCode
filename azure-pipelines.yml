@@ -24,7 +24,7 @@ jobs:
       command: 'publish'
       publishWebProjects: false
       projects: '$(pathToProject)'
-      arguments: '--configuration.Release --output $(Build.ArtifactStagingDirectory)'
+      arguments: '--configuration Release --output $(Build.ArtifactStagingDirectory)'
   - task: PublishBuildArtifacts@1
     inputs:
       PathtoPublish: '$(Build.ArtifactStagingDirectory)'
