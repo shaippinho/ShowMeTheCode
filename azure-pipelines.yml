@@ -1,9 +1,7 @@
 trigger:
 - main
-
 variables:
  pathToProject: './SMTC.API.TaxaJuros/SMTC.API.TaxaJuros.csproj'
-
 jobs: 
  - job: Build
    pool:
@@ -15,13 +13,11 @@ jobs:
         command: 'restore'
         projects: '$(pathToProject)'
         feedsToUse: 'select'
-
     - task: DotNetCoreCLI@2
       displayName:  'Compilar aplicação'
       inputs:
         command: 'build'
         projects: '$(pathToProject)'
-
     - task: DotNetCoreCLI@2
       displayName:  'Gerar Artefatos'
       inputs:
@@ -34,4 +30,3 @@ jobs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
-      
