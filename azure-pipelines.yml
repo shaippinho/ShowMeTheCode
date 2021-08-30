@@ -7,16 +7,33 @@ pool:
 variables:
  pathToProject: './SMTC.API.TaxaJuros/SMTC.API.TaxaJuros.csproj'
 
-steps:
-  - task: DotNetCoreCLI@2
-    displayName:  'Restore das dependências'
-    inputs:
-      command: 'restore'
-      projects: '$(pathToProject)'
-      feedsToUse: 'select'
+jobs: 
+ - job: Build
+   pool:
+    vmImage: ubuntu-latest
+    steps:
+      - task: DotNetCoreCLI@2
+        displayName:  'Restore das dependências'
+        inputs:
+          command: 'restore'
+          projects: '$(pathToProject)'
+          feedsToUse: 'select'
 
-  - task: DotNetCoreCLI@2
-    displayName:  'Compilar aplicação'
-    inputs:
-      command: 'build'
-      projects: '$(pathToProject)'
+      - task: DotNetCoreCLI@2
+        displayName:  'Compilar aplicação'
+        inputs:
+          command: 'build'
+          projects: '$(pathToProject)'
+
+      - task: DotNetCoreCLI@2
+        displayName:  'Publicar Microsservice'
+        inputs:
+          command: 'publish'
+          publishWebProjects: false
+          projects: '$(pathToProject)'
+          arguments: '--configuration.Release --output $Build.ArtifactStagingDirectory'
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+          ArtifactName: 'drop'
+          publishLocation: 'Container'
