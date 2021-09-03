@@ -11,6 +11,12 @@ Após a prova, o objetivo deste projeto passou para, criação de um template de
 
 Cálculo de juros compostos. A aplicação utilizará dois microsserviços. O primeiro irá fornecer a taxa de juros, e o segundo irá consumir o primeiro para calcular o valor final, levando em consideração o os dados fornecidos pelo usuário.
 
+### 👉 Status 💻
+
+[![Build Status](https://dev.azure.com/shaipinho/ShowMeTheCode/_apis/build/status/shaippinho.ShowMeTheCode?branchName=main)](https://dev.azure.com/shaipinho/ShowMeTheCode/_build/latest?definitionId=3&branchName=main)
+![Issues](https://img.shields.io/github/issues-pr-closed/shaippinho/ShowMeTheCode.svg)
+![Issues](https://img.shields.io/github/last-commit/shaippinho/ShowMeTheCode/develop)
+
 ### 🛠 Tecnologias utilizadas
 
 As seguintes ferramentas foram usadas na construção do projeto:
