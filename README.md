@@ -15,7 +15,8 @@ Cálculo de juros compostos. A aplicação utilizará dois microsserviços. O pr
 
 [![Build Status](https://dev.azure.com/shaipinho/ShowMeTheCode/_apis/build/status/shaippinho.ShowMeTheCode?branchName=main)](https://dev.azure.com/shaipinho/ShowMeTheCode/_build/latest?definitionId=3&branchName=main)
 ![Issues](https://img.shields.io/github/issues-pr-closed/shaippinho/ShowMeTheCode.svg)
-![Issues](https://img.shields.io/github/last-commit/shaippinho/ShowMeTheCode/develop)
+![Last_Commit](https://img.shields.io/github/last-commit/shaippinho/ShowMeTheCode/develop?color=purple)
+![Commit_Activity](https://img.shields.io/github/commit-activity/y/shaippinho/ShowMeTheCode?color=blue&logo=Commit_Activity&style=plastic)
 
 ### 🛠 Tecnologias utilizadas
 
